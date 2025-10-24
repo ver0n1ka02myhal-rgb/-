@@ -18,7 +18,7 @@ IF (_A000 == _B000) AND (_A000 == _C000) AND (_B000 == _C000){
     PRINT 0;
 }
 IF NOT (_A000 !< 0) OR NOT (_B000 !< 0) OR NOT (_C000 !< 0){
-    PRINT -1;
+    PRINT SUB 1;
 } ELSE {
     PRINT 0;
 }
