@@ -1,0 +1,30 @@
+# PROGRAM _R012;
+DATA INTEGER16_t _A000, _B000, _C000, _Y000;
+START
+SCAN(_A000);
+SCAN(_B000);
+SCAN(_C000);
+IF _A000 !< _B000 AND _A000 !< _C000 {
+    _A000 :> _Y000;
+} ELSE IF _B000 !< _A000 AND _B000 !< _C000{
+    _B000 :> _Y000;
+}ELSE{
+    _C000 :> _Y000;
+}
+PRINT (_Y000);
+IF (_A000 == _B000) AND (_A000 == _C000) AND (_B000 == _C000){
+    PRINT 1;
+}ELSE{
+    PRINT 0;
+}
+IF NOT (_A000 !< 0) || NOT (_B000 !< 0) || NOT (_C000 !< 0){
+    PRINT SUB 1;
+} ELSE {
+    PRINT 0;
+}
+IF (_A000 !< (_B000 ADD _C000)){
+    PRINT 10;
+} ELSE {
+    PRINT 0;
+}
+STOP
